@@ -5,21 +5,27 @@ class User extends Model {}
 
 User.init(
     {
-     id: {
-         type: DataTypes.UUID,
-         defaultValue: DataTypes.UUIDV4,
-         allowNull: false,
-         primaryKey: true,
-         autoIncrement: true,
+        id: {
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
+            allowNull: false,
+            primaryKey: true,
         },
-     user_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-     },
-     password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-     }
+        user_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user',
     }
 )
 
