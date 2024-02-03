@@ -6,8 +6,8 @@ class Comment extends Model {}
 Comment.init(
     {
         id: {
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
             allowNull: false,
             primaryKey: true,
         },
@@ -16,14 +16,14 @@ Comment.init(
             allowNull: false,
         },
         user_id: {
-            type: DataTypes.UUID,
+            type: DataTypes.INTEGER,
             references:{
                 model: 'user',
                 key: 'id'
             }
         },
         post_id: {
-            type: DataTypes.UUID,
+            type: DataTypes.INTEGER,
             references:{
                 model: 'post',
                 key: 'id'
