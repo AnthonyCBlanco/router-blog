@@ -1,17 +1,12 @@
 [
     {
-        "content": "I had the worst Day ever!!, My Boss is so annoying, Anyways i learned how to stucture my mvc thanks to SadCat420",
-        "title": "My Day So Far",
-        "user_id": "3"
+      "blog_title": "My First Post",
+      "content": "This is the content of my first post.",
+      "user_id": 1
     },
     {
-        "content": "I had the worst Day ever!!, My Boss is so annoying, Anyways i learned how to stucture my mvc thanks to SadCat420",
-        "title": "My Day So Far",
-        "user_id": "4"
-    },
-    {
-        "content": "Blah Blah Blah",
-        "title": "Blah",
-        "user_id": "1"
+      "blog_title": "Another Post",
+      "content": "This is another post in the database.",
+      "user_id": 2
     }
 ]

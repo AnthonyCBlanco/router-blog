@@ -1,8 +1,11 @@
-const Post = require('./Post')
+const Post = require('./Post.js')
 const User = require('./User')
-const Comment = require('./User')
+const Comment = require('./Comment')
 
-Post.hasOne(User)
+User.hasMany(Post)
+User.hasMany(Comment)
+Post.belongsTo(User)
 Post.hasMany(Comment)
+Comment.belongsTo(Post)
 
 module.exports = {Post, User, Comment}
