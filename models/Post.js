@@ -19,12 +19,11 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    author: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      references: {
+    user_id: {
+      type: DataTypes.INTEGER,
+      references:{
         model: 'user',
-        key: 'user_name'
+        key: 'id'
       }
     },
     createdAt: {

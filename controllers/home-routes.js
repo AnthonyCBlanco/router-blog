@@ -6,22 +6,20 @@ router.get('/', async (req, res) => {
     try{
 
         const postData = await Post.findAll({
-            // include: [
-            //     {
-            //         model: User, 
-            //     }
-            // ]
+            include: [
+                {
+                    model: User, 
+                }
+            ]
         });
         const posts = postData.map((post) =>
           post.get({plain: true})
         );
-        console.log("Posts:", postData)
-        res.render('main', 
-        {
-            posts ,
-            layout : 'main'
-        }
-        );
+        // console.log("Posts:", posts)
+        res.render('home', {
+            posts,
+            layout: 'main',  
+          });
     }catch(err){
         console.log(err);
         res.status(500).json(err);

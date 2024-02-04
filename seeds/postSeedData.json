@@ -1,11 +1,11 @@
 [
     {
-      "blog_title": "My First Post",
+      "title": "My First Post",
       "content": "This is the content of my first post.",
       "user_id": 1
     },
     {
-      "blog_title": "Another Post",
+      "title": "Another Post",
       "content": "This is another post in the database.",
       "user_id": 2
     }
