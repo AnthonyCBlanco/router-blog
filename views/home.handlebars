@@ -1,8 +1,8 @@
-  {{#each posts}}
-    <div class="post">
-      <h2>{{title}}</h2>
-      <p>{{content}}</p>
-      <p>Author: User {{author}}</p>
-      <p>Created At: {{createdAt}}</p>
-    </div>
-  {{/each}}
+ <h1>Trending Post</h1>
+{{#each posts}}
+    <article>
+        <h2>{{title}}</h2>
+        <p>{{content}}</p>
+        <p>Published on: {{formatDate createdAt}}</p>
+    </article>
+{{/each}}

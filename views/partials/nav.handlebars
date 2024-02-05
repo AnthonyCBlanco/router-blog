@@ -1,0 +1,12 @@
+
+        <nav>
+            <a href="/" class="">Router</a>
+            <div>
+                <button href="/new-post">Create Post</button>
+                {{#if loggedin}}
+                <button id="logout" class="">Logout</button>
+                {{else}}
+                <button href="/login" class="">login</a>
+                {{/if}}
+            </div>
+        </nav>

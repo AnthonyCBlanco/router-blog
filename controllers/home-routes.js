@@ -15,12 +15,20 @@ router.get('/', async (req, res) => {
         const posts = postData.map((post) =>
           post.get({plain: true})
         );
-        // console.log("Posts:", posts)
-        res.render('home', {
-            posts,
-            layout: 'main',  
-          });
+        console.log("Posts:", posts)
+
+        res.render('home', { posts });
+
     }catch(err){
+        console.log(err);
+        res.status(500).json(err);
+    }
+})
+
+router.get('/login', async (req, res) => {
+    try{
+        res.render('login')
+    } catch(err){
         console.log(err);
         res.status(500).json(err);
     }
